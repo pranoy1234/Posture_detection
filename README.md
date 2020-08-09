@@ -1,10 +1,4 @@
 ## PoseNet Python
-
-This repository contains a pure Python implementation (multi-pose only) of the Google TensorFlow.js Posenet model. For a (slightly faster) PyTorch implementation that followed from this, see (https://github.com/rwightman/posenet-pytorch)
-
-I first adapted the JS code more or less verbatim and found the performance was low so made some vectorized numpy/scipy version of a few key functions (named `_fast`).
-
-Further optimization is possible
 * The base MobileNet models have a throughput of 200-300 fps on a GTX 1080 Ti (or better)
 * The multi-pose post processing code brings this rate down significantly. With a fast CPU and a GTX 1080+:
   * A literal translation of the JS post processing code dropped performance to approx 30fps
